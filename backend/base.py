@@ -1,12 +1,16 @@
 from flask import Flask
+from convex import ConvexClient
 
 api = Flask(__name__)
 
 @api.route('/profile')
 def my_profile():
+    client = ConvexClient("https://giant-cockroach-799.convex.cloud")
+    messages = client.query("listMessages")
+    from pprint import pprint
+    pprint(messages)
     response_body = {
-        "name": "Nagato",
-        "about" :"Hello! I'm a full stack developer that loves python and javascript"
+        "messages": messages
     }
 
     return response_body

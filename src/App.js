@@ -5,7 +5,7 @@ import { useMutation } from "./convex/_generated/react";
 
 function App() {
   // data will be `undefined` while the query is first loading
-  const data = useQuery("listMessages");
+  const data = useQuery("listMessages") || [];
   const sendMessage = useMutation("sendMessage");
   const sendHello = () => sendMessage("Hello!", "me");
   return (
