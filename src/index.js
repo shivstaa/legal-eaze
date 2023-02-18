@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 import { ConvexProvider, ConvexReactClient } from "convex/react";
@@ -10,6 +9,7 @@ const address = process.env.REACT_APP_CONVEX_URL;
 const convex = new ConvexReactClient(address);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+document.body.style.overflow = "hidden"
 root.render(
   <React.StrictMode>
     <ConvexProvider client={convex}>

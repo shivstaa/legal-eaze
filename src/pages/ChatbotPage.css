@@ -1,0 +1,61 @@
+.react-chatbot-kit-chat-container {
+    width: 100% !important;
+    min-height: 100vh !important;
+}
+
+.react-chatbot-kit-chat-inner-container {
+    min-height: 100vh !important;
+}
+
+.react-chatbot-kit-chat-message-container {
+    min-height: 100vh !important;
+}
+
+.react-chatbot-kit-chat-header {
+    background-color: var(--user-highlight) !important;
+    color: var(--light-text) !important;
+}
+
+.react-chatbot-kit-chat-bot-message {
+    margin-left: 0 !important;
+    width: auto !important;
+    color: var(--background-dark) !important;
+}
+
+.react-chatbot-kit-user-avatar-container {
+    background-color: var(--user-highlight) !important;
+}
+
+.react-chatbot-kit-user-chat-message {
+    background-color: var(--user-light) !important;
+    color: var(--light-text) !important;
+}
+
+.react-chatbot-kit-chat-bot-message {
+    background-color: var(--bot-light) !important;
+}
+
+.react-chatbot-kit-chat-bot-message-arrow {
+    border-right: 8px solid var(--bot-light) !important;
+}
+
+.react-chatbot-kit-user-chat-message-arrow {
+    border-left: 8px solid var(--user-light) !important;
+}
+
+.react-chatbot-kit-chat-inner-container {
+    background-color: var(--background-dark) !important;
+}
+
+.react-chatbot-kit-chat-input {
+    background-color: var(--user-light) !important;
+    border-top: 1px solid var(--user-light) !important;
+    border-bottom-left-radius: 0px !important;
+    outline: none !important;
+    color: var(--light-text) !important;
+}
+
+.react-chatbot-kit-chat-btn-send {
+    background-color: var(--user-highlight) !important;
+    border-bottom-right-radius: 0px !important;
+}
