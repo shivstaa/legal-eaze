@@ -1,9 +1,11 @@
-import './App.css';
+import './Chatbot.css';
+import Chatbot from 'react-chatbot-kit'
+import 'react-chatbot-kit/build/main.css'
 
 import { useQuery } from "./convex/_generated/react";
 import { useMutation } from "./convex/_generated/react";
 
-function App() {
+function ChatbotPage() {
   // data will be `undefined` while the query is first loading
   const data = useQuery("listMessages");
   const sendMessage = useMutation("sendMessage");
@@ -22,4 +24,4 @@ function App() {
   );
 }
 
-export default App;
+export default ChatbotPage;

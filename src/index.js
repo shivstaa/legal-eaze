@@ -4,10 +4,17 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+import { ConvexProvider, ConvexReactClient } from "convex/react";
+import ChatbotPage from './pages/ChatbotPage';
+const address = process.env.REACT_APP_CONVEX_URL;
+const convex = new ConvexReactClient(address);
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <ConvexProvider client={convex}>
+      <ChatbotPage />
+    </ConvexProvider>
   </React.StrictMode>
 );
 
