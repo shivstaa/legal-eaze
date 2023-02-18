@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
+import App from './App'
 
 import { ConvexProvider, ConvexReactClient } from "convex/react";
 import ChatbotPage from './pages/ChatbotPage';
@@ -13,7 +14,7 @@ document.body.style.overflow = "hidden"
 root.render(
   <React.StrictMode>
     <ConvexProvider client={convex}>
-      <ChatbotPage />
+      <App />
     </ConvexProvider>
   </React.StrictMode>
 );
