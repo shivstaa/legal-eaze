@@ -11,6 +11,10 @@
     min-height: 90vh !important;
 }
 
+.react-chatbot-kit-chat-bot-avatar-container {
+    min-width: 40px !important;
+}
+
 .react-chatbot-kit-chat-header {
     background-color: var(--user-highlight) !important;
     color: var(--light-text) !important;

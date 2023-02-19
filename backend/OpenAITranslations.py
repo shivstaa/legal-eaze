@@ -1,7 +1,7 @@
 from os import environ
 import openai
 
-OPENAI_API_KEY = environ.get('OPENAI_API_KEY')
+OPENAI_API_KEY = "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"
 openai.api_key = OPENAI_API_KEY
 model = 'text-davinci-003'
 
