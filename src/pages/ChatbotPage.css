@@ -61,3 +61,17 @@
     background-color: var(--user-highlight) !important;
     border-bottom-right-radius: 0px !important;
 }
+
+.donate-button {
+    position: absolute;
+    top: 1%;
+    right: 1%;
+    height: 25px;
+    background-color: var(--user-light);
+    color: var(--light-text);
+    border: none;
+}
+
+.donate-button:hover {
+    background-color: var(--user-light-hover);
+}
