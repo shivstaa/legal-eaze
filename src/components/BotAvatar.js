@@ -7,8 +7,8 @@ const BotAvatar = () => {
     };
 
     return (
-      <div class="react-chatbot-kit-chat-bot-avatar-container">
-        <div class="react-chatbot-kit-bot-avatar">
+      <div className="react-chatbot-kit-chat-bot-avatar-container">
+        <div className="react-chatbot-kit-bot-avatar">
             <img src={featherIcon} alt="feather quill icon" style={imgStyle}></img>
         </div>
       </div>

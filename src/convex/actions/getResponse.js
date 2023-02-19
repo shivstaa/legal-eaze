@@ -1,19 +1,14 @@
 import fetch from "node-fetch";
 import { action } from "../_generated/server";
 
-function giphyUrl(queryString) {
-//   return (
-//     "https://api.giphy.com/v1/gifs/translate?api_key=" +
-//     process.env.GIPHY_KEY +
-//     "&s=" +
-//     encodeURIComponent(queryString)
-//   );
-}
-
 // Post a GIF chat message corresponding to the query string.
-export default action(async ({ runMutation }, queryString, author) => {
-    console.log("action!");
-    // const data = await fetch('/profile');
+export default action(async ({ runMutation }, queryString) => {
+    // console.log("action!");
+    const data = await fetch('http://localhost:5000/');
+    // console.log(data);
+    // return data;
+    console.log(data);
+    await runMutation("sendMessage", queryString, "an author");
     // console.log(data);
 //     fetch('/profile')
 //         .then(function (response) {

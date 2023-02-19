@@ -1,7 +1,12 @@
 import React from 'react';
+import { useAction } from '../convex/_generated/react';
+
 
 const MessageParser = ({ children, actions }) => {
-  const parse = (message) => {
+  const getResponse = useAction("actions/getResponse");
+
+  const parse = async (message) => {
+    await getResponse(message);
     actions.getMLResponse();
   };
 

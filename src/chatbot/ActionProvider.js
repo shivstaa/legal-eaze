@@ -1,10 +1,11 @@
 import React from 'react';
 import { useQuery } from "../convex/_generated/react";
-import { useMutation } from "../convex/_generated/react";
 
 const ActionProvider = ({ createChatBotMessage, setState, children }) => {
-  const getMLResponse = () => {
-    const botMessage = createChatBotMessage("bot says hi!");
+  const data = useQuery("listMessages") || [];
+
+  const getMLResponse = async () => {
+    const botMessage = createChatBotMessage(data[0].body);
 
     setState((prev) => ({
       ...prev,

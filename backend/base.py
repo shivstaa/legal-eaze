@@ -1,16 +1,18 @@
 from flask import Flask
 from convex import ConvexClient
+from os import environ 
 
 api = Flask(__name__)
+CONVEX_URL = environ.get('REACT_APP_CONVEX_URL')
+print(CONVEX_URL)
 
-@api.route('/profile')
+@api.route('/')
 def my_profile():
-    client = ConvexClient("https://giant-cockroach-799.convex.cloud")
+    client = ConvexClient(CONVEX_URL)
     messages = client.query("listMessages")
-    from pprint import pprint
-    pprint(messages)
     response_body = {
-        "messages": messages
+        "messages": messages[0]
     }
+    # client.mutation("sendMessage")
 
     return response_body
