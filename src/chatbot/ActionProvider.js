@@ -4,8 +4,8 @@ import { useQuery } from "../convex/_generated/react";
 const ActionProvider = ({ createChatBotMessage, setState, children }) => {
   const data = useQuery("listMessages") || [];
 
-  const getMLResponse = async () => {
-    const botMessage = createChatBotMessage(data[0].body);
+  const getMLResponse = async (nextMsg) => {
+    const botMessage = createChatBotMessage(nextMsg);
 
     setState((prev) => ({
       ...prev,

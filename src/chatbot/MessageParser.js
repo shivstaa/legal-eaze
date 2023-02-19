@@ -1,13 +1,25 @@
 import React from 'react';
-import { useAction } from '../convex/_generated/react';
 
 
 const MessageParser = ({ children, actions }) => {
-  const getResponse = useAction("actions/getResponse");
 
   const parse = async (message) => {
-    await getResponse(message);
-    actions.getMLResponse();
+    const input = { input: message };
+    const data = await fetch('http://localhost:5000/response', {
+      method: 'POST',
+      headers: { 
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Credentials': 'True',
+        'Access-Control-Allow-Headers': 'access-control-allow-methods, access-control-allow-origin, content-type',
+        'Access-Control-Allow-Methods': 'DELETE, GET, HEAD, OPTIONS, PATCH, POST, PUT',
+        'Access-Control-Allow-Origin': '*',
+      },
+      // mode: 'no-cors',
+      body: JSON.stringify(input),
+    });
+    const json = await data.json();
+
+    actions.getMLResponse(json.messages);
   };
 
   return (
