@@ -6,5 +6,5 @@ def sendEntities(jsonFile):
     doc = nlp(text)
     entities = []
     for ent in doc.ents:
-        entities.append(ent)
+        entities.append((ent, ent.label_))
     return entities

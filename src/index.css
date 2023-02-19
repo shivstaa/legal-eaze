@@ -14,9 +14,9 @@ code {
 
 :root {
   --bot-light: #f1dac4;
-  --user-light: #988d9f;
-  --user-highlight: #484b79;
-  --background-dark: #252525;
+  --user-light: #9f87ae;
+  --user-highlight: rgba(93, 19, 172, 0.64);
+  --background-dark: #000000;
   --background-highlight: #161B33;
   --light-text: #fff;
   --user-light-hover: #867d8b;

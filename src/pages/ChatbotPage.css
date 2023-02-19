@@ -33,7 +33,7 @@
 }
 
 .react-chatbot-kit-user-chat-message {
-    background-color: var(--user-light) !important;
+    background-color: var(--user-highlight) !important;
     color: var(--light-text) !important;
 }
 
@@ -46,7 +46,7 @@
 }
 
 .react-chatbot-kit-user-chat-message-arrow {
-    border-left: 8px solid var(--user-light) !important;
+    border-left: 8px solid var(--user-highlight) !important;
 }
 
 .react-chatbot-kit-chat-inner-container {
@@ -68,7 +68,7 @@
 
 .donate-button {
     position: absolute;
-    top: 1%;
+    top: 1.5%;
     right: 1%;
     height: 25px;
     background-color: var(--user-light);
