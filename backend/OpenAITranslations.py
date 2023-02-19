@@ -1,6 +1,7 @@
+from os import environ
 import openai
 
-OPENAI_API_KEY = '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'
+OPENAI_API_KEY = environ.get('OPENAI_API_KEY')
 openai.api_key = OPENAI_API_KEY
 model = 'text-davinci-003'
 
@@ -9,7 +10,8 @@ def insert_model_data(prompts):
     for prompt in prompts:
         response = openai.Completion.create(
             prompt = "what is" + str(prompt) + "in Indian law?", 
-            model = model
+            model = model,
+            max_tokens=100
         )
         responses.append(response)
     return responses

@@ -8,12 +8,14 @@
 }
 
 .react-chatbot-kit-chat-message-container {
-    min-height: 100vh !important;
+    min-height: 90vh !important;
 }
 
 .react-chatbot-kit-chat-header {
     background-color: var(--user-highlight) !important;
     color: var(--light-text) !important;
+    border-top-right-radius: 0 !important;
+    border-top-left-radius: 0 !important;
 }
 
 .react-chatbot-kit-chat-bot-message {

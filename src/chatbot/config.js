@@ -3,7 +3,7 @@ import BotAvatar from '../components/BotAvatar';
 
 const config = {
   botName: "Legal Eaze",
-  initialMessages: [createChatBotMessage(`Hello world`)],
+  initialMessages: [createChatBotMessage(`Please enter a legal statement.`)],
   customComponents: {
     botAvatar: (props) => <BotAvatar {...props} />,
   }

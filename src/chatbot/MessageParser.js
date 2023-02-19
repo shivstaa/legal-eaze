@@ -14,12 +14,14 @@ const MessageParser = ({ children, actions }) => {
         'Access-Control-Allow-Methods': 'DELETE, GET, HEAD, OPTIONS, PATCH, POST, PUT',
         'Access-Control-Allow-Origin': '*',
       },
-      // mode: 'no-cors',
       body: JSON.stringify(input),
     });
     const json = await data.json();
-
-    actions.getMLResponse(json.stringify);
+    if (json.messages.length === 0) {
+      actions.getMLResponse("There are no matches.")
+    } else {
+      json.messages.map((message) => actions.getMLResponse(message.choices[0].text));
+    }
   };
 
   return (
