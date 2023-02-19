@@ -4,10 +4,11 @@ import { action } from "../_generated/server";
 // Post a GIF chat message corresponding to the query string.
 export default action(async ({ runMutation }, queryString) => {
     // console.log("action!");
-    const data = await fetch('http://localhost:5000/');
+    fetch('http://localhost:5000/').then((response) => {
+
+    }).catch((err) => console.log(err));
     // console.log(data);
     // return data;
-    console.log(data);
     await runMutation("sendMessage", queryString, "an author");
     // console.log(data);
 //     fetch('/profile')
