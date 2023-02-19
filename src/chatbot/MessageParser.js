@@ -19,7 +19,7 @@ const MessageParser = ({ children, actions }) => {
     });
     const json = await data.json();
 
-    actions.getMLResponse(json.messages);
+    actions.getMLResponse(json.stringify);
   };
 
   return (
